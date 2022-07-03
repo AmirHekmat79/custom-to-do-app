@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="title icon" href="./images/checklist.png" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="Themes">
+        <i
+          class="fas"
+          :class="[currentIcon ,moonIcon]"
+          @click="changeThemeHandler()"
+        ></i>
+      </div>
+      <h1 :style="{color : ThemeColor }">To Do List App</h1>
+      <div class="inputContainer">
+        <input
+          type="text"
+          placeholder="Add Your New Todo"
+          v-model="InputValue"
+          @keyup="ToDoInputHandler"
+        />
+        <button class="AddBtn" @click="AddBtnHandler()">ADD</button>
+      </div>
+      <ul class="ToDoContainer">
+        <li :style="ToDoColor" v-for="ToDo in ToDosArray" @click="DeleteToDo">
+          {{ToDo}}
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
+    <script src="./scripts/vue.js"></script>
+  </body>
+</html>

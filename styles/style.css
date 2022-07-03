@@ -1,0 +1,57 @@
+*{
+    box-sizing : border-box;
+    font-family:'Courgette', cursive ;
+}
+body{
+    background-color: #232526;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.inputContainer{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputContainer input{
+    width : 100%;
+    text-align: center;
+}
+.inputContainer  button{
+    background: linear-gradient(#ffb347 ,#ffcc33);
+    cursor: pointer;
+}
+.inputContainer input , button{
+   margin : 5px; 
+   padding : 10px 20px;
+   border-radius: 10px;
+}
+.Themes .moonIcon{
+    color : #eee;
+}
+
+.Themes .sunIcon{
+    color :#ffff00;
+}
+
+.Themes .moonIcon , .sunIcon{
+    position: absolute;
+    font-size : 45px;
+    top : 27px;
+    cursor: pointer;
+    transition: all .7s;
+}
+.ToDoContainer{
+    text-align: center;
+}
+
+.ToDoContainer li{
+    list-style-type: none;
+    border-radius: 10px;
+    padding:24px 60px;
+    width : 50%;
+    margin : auto;
+    margin-top : 30px;
+}
+
